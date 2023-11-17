@@ -10,7 +10,7 @@ Redoc Swagger Generator is a simple tool designed for viewing API documents with
     cp path/to/your/file.yml path/to/this/project/docs/file.yml
     ```
 
-2. Access and visualize your Swagger documentation through the following URLs:
+2. Access and visualise your Swagger documents via URLs, as in the examples below:
 
    - Swagger:
        - [https://ynuskyd.github.io/swaggeredoc-gen/?q=petstore.json](https://ynuskyd.github.io/swaggeredoc-gen/?q=petstore.json)
@@ -20,5 +20,3 @@ Redoc Swagger Generator is a simple tool designed for viewing API documents with
    - Redoc:
      - [https://ynuskyd.github.io/swaggeredoc-gen/docs/petstore.html](https://ynuskyd.github.io/swaggeredoc-gen/docs/petstore.html)
      - [https://ynuskyd.github.io/swaggeredoc-gen/docs/todo.html](https://ynuskyd.github.io/swaggeredoc-gen/docs/todo.html)
-
-Visit the provided URLs in your browser to easily view and navigate your Swagger documentation.
