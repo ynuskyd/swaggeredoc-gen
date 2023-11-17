@@ -1,3 +1,4 @@
+
 # Redoc Swagger Generator
 
 Redoc Swagger Generator is a simple tool designed for viewing API documents with Swagger UI and visualizing them in HTML using Redoc.
