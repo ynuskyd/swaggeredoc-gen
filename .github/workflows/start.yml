@@ -1,0 +1,61 @@
+name: swagger-redoc-generate
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Build the Docker image
+      run: docker build -t doc-craft:latest .
+
+    - name: Run the Docker container
+      run: docker run --rm doc-craft:latest
+
+    - name: Generate Redoc
+      run:  |
+            for filename in ./docs/*.{yml,json}; do
+              output_filename="./docs/$(echo $filename | sed -E 's/\.(json|yml)$//').html"
+              npx redoc-cli bundle -o "$output_filename" "$filename"
+            done
+    
+    - name: Checkout swagger-ui
+      uses: actions/checkout@v3
+      with:
+        repository: swagger-api/swagger-ui
+        ref: 'v4.15.5'
+        path: swagger-ui
+
+    - name: Inject Swagger static files
+      run: cp -n swagger-ui/dist/* docs/
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: 'docs/'
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
+
