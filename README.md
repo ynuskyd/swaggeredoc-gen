@@ -14,7 +14,7 @@ Redoc Swagger Generator is a simple tool designed for viewing API documents with
 
    - Swagger:
        - [https://ynuskyd.github.io/swaggeredoc-gen/?q=petstore.json](https://ynuskyd.github.io/swaggeredoc-gen/?q=petstore.json)
-       - [https://ynuskyd.github.io/swaggeredoc-gen/?q=todo.json](https://ynuskyd.github.io/swaggeredoc-gen/?q=todo.json) or
+       - [https://ynuskyd.github.io/swaggeredoc-gen/?q=todo.json](https://ynuskyd.github.io/swaggeredoc-gen/?q=todo.yml) or
        - Directly fetch by searching in the address bar -> [https://ynuskyd.github.io/swaggeredoc-gen/](https://ynuskyd.github.io/swaggeredoc-gen/)
 
    - Redoc:
