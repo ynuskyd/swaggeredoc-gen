@@ -1,22 +1,21 @@
 
-# Redoc Swagger Generator
+# SwaggeRedoc Generator
 
-Redoc Swagger Generator is a simple tool designed for viewing API documents with Swagger UI and visualizing them in HTML using Redoc.
+Automate API documentation updates with GitHub Actions. Each push triggers a workflow that updates Swagger JSON and Redoc HTML files.
 
 ## Usage
 
-1. Add your `.yml` or `.json` files to the `docs` folder in the project's root:
+- Add your .yml or .json files to the docs folder in the project's root
+- Commit changes and push to the main branch
 
-    ```bash
-    cp path/to/your/file.yml path/to/this/project/docs/file.yml
-    ```
+This ensures automatic updates for everyone to access the API documentation.
 
-2. Access and visualise your Swagger documents via URLs, as in the examples below:
+Explore Swagger and Redoc documents through the via URLs, as in the examples below:
 
    - Swagger:
        - [https://ynuskyd.github.io/swaggeredoc-gen/?q=petstore.json](https://ynuskyd.github.io/swaggeredoc-gen/?q=petstore.json)
        - [https://ynuskyd.github.io/swaggeredoc-gen/?q=todo.yml](https://ynuskyd.github.io/swaggeredoc-gen/?q=todo.yml) or
-       - Directly fetch by searching in the address bar -> [https://ynuskyd.github.io/swaggeredoc-gen/](https://ynuskyd.github.io/swaggeredoc-gen/)
+       - Directly fetch by searching in the address bar > [https://ynuskyd.github.io/swaggeredoc-gen/](https://ynuskyd.github.io/swaggeredoc-gen/)
 
    - Redoc:
      - [https://ynuskyd.github.io/swaggeredoc-gen/docs/petstore.html](https://ynuskyd.github.io/swaggeredoc-gen/docs/petstore.html)
